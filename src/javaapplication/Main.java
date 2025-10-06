@@ -1,5 +1,5 @@
 /*
-  String methods
+  String .substring() function
  */
 package javaapplication;
 
@@ -8,69 +8,39 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    String name = "   Mark Johnson   ";
+    // .substring() : A method used to extract a portion of a string
+    //                  .substring(start, end)
+    //                Both parameters are zero-based, end parameter is exclusive
+    //                end parameter is optional, defaults to end of string
 
-    // length : return length of string
-    int length = name.length();
-    System.out.println(length);
+    Scanner scanner = new Scanner(System.in);
 
-    // charAt(index) : return character at position index of string
-    char letter = name.charAt(9);
-    System.out.println(letter);
+    String email;
+    String username;
+    String domain;
 
-    // indexOf(string) : returns index of first occurance of provided string
-    //   case-sensitive, returns -1 if string is not found
-    int index = name.indexOf("o");
-    System.out.println(index);
-    index = name.indexOf("john");
-    System.out.println(index);
+    System.out.println("Enter your email: ");
+    email = scanner.nextLine();
 
-    // lastIndexOf(string) : return index of first occurance of provided string
-    //   case-sensitive, returns -1 if string is not found
-    int lastIndex = name.lastIndexOf("o");
-    System.out.println(lastIndex);
-    index = name.indexOf("O");
-    System.out.println(index);
+    // validate email
+    if (email.contains("@")) {
 
-    // .toUpperCase() : returns string in all capital letters
-    String upper = name.toUpperCase();
-    System.out.println(upper);
+      // get first 4 letters
+      String firstFour = email.substring(0, 4);
+      System.out.println(firstFour);
 
-    // .toLowerCase() : returns string in all lower case letters
-    String lower = name.toLowerCase();
-    System.out.println(lower);
+      // get substring based on character occurance ("@")
+      username = email.substring(0, email.indexOf("@"));
+      System.out.println(username);
 
-    // .trim() : trims leading and trailing spaces
-    System.out.println(name.trim());
-
-    // .replace(find, replace) : replaces all occurances of find with replace
-    String replaced = name.replace("Mark", "Jose");
-    System.out.println(replaced);
-
-    // .isEmpty() : returns true if empty string, false if not
-    System.out.println(name.isEmpty());
-
-    if (name.isEmpty()) {
-      System.out.println("Your name is empty");
+      // get substring after character occurance ("@")
+      domain = email.substring(email.indexOf("@") + 1);  // + 1 skips parameter character
+      System.out.println(domain);
     }
     else {
-      System.out.println("Your name is " + name);
+      System.out.println("Email must contain @");
     }
-
-    // .contains(string) : return boolean if string is found (case-sensitive)
-    if (name.contains("Mark")) {
-      System.out.println("Your name has my name");
-    }
-    else {
-      System.out.println("Your name does not contain Mark");
-    }
-    
-    // .equals(string) : returns boolean if string parameter is equal to original string (case-sensitive)
-    if(name.equals(name.toLowerCase())) {
-      System.out.println("Your name is lower case");
-    } else {
-      System.out.println("Your name is not mark johnson");
-    }
+    scanner.close();
   }
 
 }
