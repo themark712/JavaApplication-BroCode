@@ -1,3 +1,6 @@
+/*
+  nested if() statements
+ */
 package javaapplication;
 
 import java.util.Scanner;
@@ -5,32 +8,26 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    // Project: Compound Interest Calculator
+    boolean isStudent = true;
+    boolean isSenior = true;
+    double price = 9.99;
 
-    Scanner scanner = new Scanner(System.in);
+    if (isStudent) {
+      if (isSenior) {
+        System.out.println("You get a senior discount of 20%");
+        price *= 0.8;
+      }
+      System.out.println("You get a student discount of 10%");
+      price *= 0.9;
+    }
+    else {
+      if (isSenior) {
+        System.out.println("You get a senior discount of 20%");
+        price *= 0.8;
+      }
+    }
 
-    double principal;
-    double rate;
-    int timesCompounded;
-    int years;
-    double amount;
-
-    System.out.print("Enter the pricipal amount: ");
-    principal = scanner.nextDouble();
-
-    System.out.print("Enter the interest rate (%): ");
-    rate = scanner.nextDouble() / 100;
-
-    System.out.print("Enter the number of times compounded: ");
-    timesCompounded = scanner.nextInt();
-
-    System.out.print("Enter the number of years: ");
-    years = scanner.nextInt();
-
-    amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
-
-    System.out.printf("The amount after %d years is : $%.2f\n", years, amount);
-    scanner.close();
+    System.out.printf("The price of your ticket is: $%.2f\n", price);
   }
 
 }
