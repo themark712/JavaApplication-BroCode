@@ -1,11 +1,11 @@
 /*
   enhanced switches
  */
-package javaapplication;
+package javaapplication.main019;
 
 import java.util.Scanner;
 
-public class Main018 {
+public class Main {
 
   public static void main(String[] args) {
     // Enhanced switch : a rejplacement to many else...if statements
