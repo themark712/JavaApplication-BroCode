@@ -1,11 +1,11 @@
 /*
   ternary operator
  */
-package javaapplication;
+package javaapplication.main016;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main016 {
 
   public static void main(String[] args) {
     // ternary operator ? : return 1 of 2 values based on shorthand condition
