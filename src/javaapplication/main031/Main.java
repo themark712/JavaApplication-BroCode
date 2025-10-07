@@ -5,8 +5,6 @@
 package javaapplication.main031;
 
 import java.util.Arrays;
-import javaapplication.main030.*;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
