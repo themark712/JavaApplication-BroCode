@@ -1,0 +1,10 @@
+{
+  "systems" :[
+    {"id" : 1, "name" : "Metric", "abbreviation" : "SI"},
+    {"id" : 2, "name" : "Imperial", "abbreviation" : "IM"}
+  ],
+  "units" :[
+    {"id" : 1, "category" : "length", "system" : "SI", "name" : "meter", "abbreviation" : "m", "base" : true},
+    {"id" : 2, "category" : "length", "system" : "SI", "name" : "kilometer", "abbreviation" : "km", "base" : true}
+  ]
+}
