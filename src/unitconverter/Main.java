@@ -26,11 +26,13 @@ public class Main {
       JSONObject json = (JSONObject) parser.parse(fileReader);
       
       JSONArray units = (JSONArray) json.get("units");
+      
+      // parsing the array of objects
       Iterator i = units.iterator();
 
       while (i.hasNext()) {
-        JSONObject slide = (JSONObject) i.next();
-        String title = (String) slide.get("name");
+        JSONObject unit = (JSONObject) i.next();
+        String title = (String) unit.get("name");
 
         System.out.println(title);
       }
