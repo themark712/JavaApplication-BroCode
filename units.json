@@ -5,6 +5,8 @@
   ],
   "units" :[
     {"id" : 1, "category" : "length", "system" : "SI", "name" : "meter", "abbreviation" : "m", "base" : true},
-    {"id" : 2, "category" : "length", "system" : "SI", "name" : "kilometer", "abbreviation" : "km", "base" : true}
+    {"id" : 2, "category" : "length", "system" : "SI", "name" : "kilometer", "abbreviation" : "km", "base" : false},
+    {"id" : 3, "category" : "length", "system" : "IM", "name" : "foot", "abbreviation" : "mi", "base" : true},
+    {"id" : 4, "category" : "length", "system" : "IM", "name" : "mile", "abbreviation" : "mi", "base" : false}
   ]
 }
